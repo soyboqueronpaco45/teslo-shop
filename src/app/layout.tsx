@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 
 import { fontBody } from '@/config/fonts'
 
-
+import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
