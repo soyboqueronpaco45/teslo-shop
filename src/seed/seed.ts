@@ -10,7 +10,10 @@ interface SeedProduct {
     type: ValidTypes;
     gender: 'men'|'women'|'kid'|'unisex'
 }
-
+interface SeedMenu {
+    label: string
+    url: string
+}
 type ValidSizes = 'XS'|'S'|'M'|'L'|'XL'|'XXL'|'XXXL';
 type ValidTypes = 'shirts'|'pants'|'hoodies'|'hats';
 
@@ -18,8 +21,25 @@ interface SeedData {
     products: SeedProduct[],
 }
 
-
-
+interface MenuData {
+    menu: SeedMenu[]
+}
+export const initialMenu: MenuData = {
+    menu: [
+        {
+            label: 'Hombres',
+            url: '/category/men'
+        },
+        {
+            label: 'Mujeres',
+            url: '/category/women'
+        },
+        {
+            label: 'Niños',
+            url: '/category/kids'
+        }
+    ]
+}
 
 export const initialData: SeedData = {
     products: [
